@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block title%}
+Display Information
+{% endblock title%}
+
+{% block body%}
+   <h1 class="container"> Details page </h1>
+   <div class="container" >
+       <div class="alert alert-info">
+         <h5>{{ ar.title }}</h5>
+         <p>{{ ar.intro }}</p>
+         <p><b> Date : {{ ar.date.date() }}</b></p>
+           <a class="text-danger" href="/posts/{{ ar.id}}/delete"><i class="fa fa-trash"></i></a>
+           <a href="/posts/{{ ar.id}}/update" ><i class="fa fa-edit"></i></a>
+
+
+
+      </div>
+
+
+
+   </div>
+{% endblock body%}
